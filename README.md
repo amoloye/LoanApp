@@ -16,3 +16,6 @@ The API has two endpoints:
 POST /loan: Apply for a loan. Request body must contain the following fields: personal_id, name, amount, and term. The response contains a status message and the monthly repayment amount.
 GET /loans/{personal_id}: Retrieve a list of loans for a specific personal_id. The response contains a list of loans, each with the fields amount, term, and monthly_repayment_amount.
 The API also checks for blacklisted personal IDs and limits the number of loan applications per day.
+
+#Test
+test with "http://127.0.0.1:8080/api/docs"
