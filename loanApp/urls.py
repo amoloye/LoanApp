@@ -1,7 +1,14 @@
-
+from django.contrib import admin
 from django.urls import path
+from ninja import NinjaAPI
 from loan.api import router
 
+
+api = NinjaAPI()
+api.add_router("/loan/", router)
+
 urlpatterns = [
-    path('api/', router.urls),
+    path('admin/', admin.site.urls),
+
+    path("api/", api.urls),
 ]
