@@ -54,4 +54,6 @@ def list_loans(request, personal_id: str) -> Dict[str, Any]:
     loans = Loan.objects.filter(personal_id=personal_id).values(
         'amount', 'term', 'monthly_repayment_amount', 'created_at'
     )
-    return {'loans': list(loans)}
+    if not loans:
+        return {'status': 'rejected', 'reason': 'no loans found'}
+    return {'status': 'approved', 'loans': list(loans)}

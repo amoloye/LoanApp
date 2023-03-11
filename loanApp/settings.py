@@ -120,6 +120,7 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 BLACKLISTED_IDS = ['1234567890', '0987654321']  # replace with actual blacklisted IDs
+MAX_APPLICATIONS_PER_DAY = 10
 
 
 
