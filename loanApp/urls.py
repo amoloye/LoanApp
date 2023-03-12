@@ -5,7 +5,7 @@ from loan.api import router
 
 
 api = NinjaAPI()
-api.add_router("/loan/", router)
+api.add_router("/", router)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
